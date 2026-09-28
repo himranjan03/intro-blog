@@ -10,7 +10,7 @@
     "avatar": "/profile.jpg",
     "resumeUrl": "#",
     "social": {
-      "github": "https://github.com/himanshuranjan30",
+      "github": "https://github.com/himranjan03",
       "linkedin": "https://www.linkedin.com/in/himanshu-ranjan",
       "twitter": "https://x.com",
       "email": "mailto:himanshuranjan3@gmail.com"
@@ -99,7 +99,7 @@
         "Threat Intelligence: Designed adaptive SSH honeypot ecosystems (Cowrie) with LLM-driven decoys, continuously strengthening threat detection capabilities & behavioral analytics through intelligent log correlation.",
         "Cloud Reliability Engineering: Operationalized Finix & Plaid payment integrations while continuously fortifying AWS observability through CloudWatch and EventBridge to ensure high availability, compliance, and transactional resilience.",
         "Digital Workflow Optimization: Engineered automated document generation pipelines leveraging S3 storage and dynamic PDF rendering, streamlining contract lifecycle management and enterprise reporting workflows.",
-        "Data Pipeline Engineering: Designed and maintained high-throughput RESTful APIs and data pipelines using Python/Node.js and MySQL/MongoDB, enabling large-scale application performance for property management and micro-lending platforms.",
+        "Data Pipeline Engineering: Designing and maintaining high-throughput RESTful APIs and data pipelines using Python/Node.js and MySQL/MongoDB, enabling large-scale application performance for property management and micro-lending platforms.",
         "Key Highlight: Led end-to-end delivery of scalable AI platforms supporting 3+ workloads, reducing solution turnaround time by 35%.",
         "Key Highlight: Architected cloud-native data pipelines processing 60 TB/day, improving data throughput and reducing latency by 35%."
       ],
@@ -159,15 +159,149 @@
   ],
   "software": [
     {
+      "id": "soft-awesome-llm",
+      "title": "Awesome LLM Apps & AI Agents",
+      "tagline": "Curated collection of LLM applications with autonomous AI agents and advanced RAG architectures.",
+      "description": "Production patterns, reference architectures, and open-source recipes for building multi-modal LLM applications with autonomous agents and RAG using OpenAI, Anthropic, Gemini, and open-source models.",
+      "currentVersion": "v1.5.0",
+      "status": "Active Open Source",
+      "category": "GenAI & LLM Architecture",
+      "icon": "Cpu",
+      "githubUrl": "https://github.com/himranjan03/awesome-llm-apps",
+      "demoUrl": "",
+      "tags": [
+        "Python",
+        "AI Agents",
+        "RAG",
+        "OpenAI",
+        "LangChain",
+        "Open Source"
+      ],
+      "releases": [
+        {
+          "version": "v1.5.0",
+          "date": "2026-09-12",
+          "highlight": "Multi-agent orchestration recipes & vector search benchmarks",
+          "changes": [
+            "Added autonomous multi-agent collaboration patterns using LangGraph and AutoGen.",
+            "Integrated hybrid sparse-dense vector retrieval benchmark suite.",
+            "Added prompt caching and cost-optimization middleware."
+          ]
+        },
+        {
+          "version": "v1.2.0",
+          "date": "2026-05-20",
+          "highlight": "Agentic tool-calling workflows",
+          "changes": [
+            "Added structured JSON schema tool-calling examples.",
+            "Implemented streaming voice-agent WebSocket connector."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "soft-anything-llm",
+      "title": "Anything-LLM Desktop & Docker RAG",
+      "tagline": "The all-in-one AI desktop and Docker workspace with built-in RAG and multi-agent support.",
+      "description": "Comprehensive full-stack AI platform enabling custom document ingestion, embedding model selection, vector database integration, and multi-user chat workspaces in an isolated privacy-first environment.",
+      "currentVersion": "v2.0.4",
+      "status": "Active Open Source",
+      "category": "AI Workspace & RAG",
+      "icon": "Activity",
+      "githubUrl": "https://github.com/himranjan03/anything-llm",
+      "demoUrl": "",
+      "tags": [
+        "Docker",
+        "RAG",
+        "Vector Search",
+        "Node.js",
+        "AI Agents"
+      ],
+      "releases": [
+        {
+          "version": "v2.0.4",
+          "date": "2026-08-28",
+          "highlight": "Pinecone serverless connector & local Ollama integration",
+          "changes": [
+            "Enhanced Pinecone serverless index creation and document partitioning.",
+            "Optimized in-browser document parsing for complex PDF schemas.",
+            "Implemented granular role-based workspace permissions."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "soft-ruview",
+      "title": "RuView: WiFi DensePose & Presence AI",
+      "tagline": "Real-time human pose estimation, vital sign monitoring, and presence detection via WiFi CSI.",
+      "description": "Revolutionary edge sensing platform that turns commodity WiFi signals into real-time human pose estimation, vital sign tracking, and room occupancy detection without cameras or video pixels, preserving privacy.",
+      "currentVersion": "v1.2.0",
+      "status": "Open Source",
+      "category": "IoT & Edge AI",
+      "icon": "Terminal",
+      "githubUrl": "https://github.com/himranjan03/RuView",
+      "demoUrl": "",
+      "tags": [
+        "Python",
+        "PyTorch",
+        "Edge AI",
+        "Signal Processing",
+        "Computer Vision"
+      ],
+      "releases": [
+        {
+          "version": "v1.2.0",
+          "date": "2026-07-15",
+          "highlight": "Quantized pose estimation model & sub-millisecond inference",
+          "changes": [
+            "Implemented INT8 quantization for edge microcontroller inference.",
+            "Added real-time respiration rate telemetry graphing.",
+            "Reduced channel state information (CSI) noise with Savitzky-Golay filters."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "soft-openclaw",
+      "title": "OpenClaw Multi-Platform AI Assistant",
+      "tagline": "Cross-platform personal AI agent for deep OS automations and productivity workflows.",
+      "description": "A versatile open-source autonomous assistant designed to automate complex desktop and cloud workflows, integrating voice commands, shell execution, and localized LLM reasoning across macOS, Linux, and Windows.",
+      "currentVersion": "v1.1.0",
+      "status": "Active Open Source",
+      "category": "AI Automation & OS",
+      "icon": "Cpu",
+      "githubUrl": "https://github.com/himranjan03/openclaw",
+      "demoUrl": "",
+      "tags": [
+        "Python",
+        "AI Agents",
+        "Automation",
+        "Desktop AI",
+        "Open Source"
+      ],
+      "releases": [
+        {
+          "version": "v1.1.0",
+          "date": "2026-06-30",
+          "highlight": "Voice command pipeline and cross-platform hooks",
+          "changes": [
+            "Integrated Whisper streaming voice command listener.",
+            "Added safe sandboxed shell command execution guardrails.",
+            "Implemented automated notification and workflow trigger dispatchers."
+          ]
+        }
+      ]
+    },
+    {
       "id": "soft-rag-chatbot",
       "title": "Electronics Connector AI Chatbot (RAG)",
-      "tagline": "Large-scale semantic search & retrieval engine over 1.5M+ electronic product records.",
-      "description": "High-performance Retrieval-Augmented Generation (RAG) platform indexing 1.5M+ products using OpenAI embeddings and Pinecone vector database. Incorporates automated web scraping, data normalization, and low-latency semantic query resolution.",
+      "tagline": "Enterprise large-scale semantic search & retrieval engine over 1.5M+ electronic product records.",
+      "description": "High-performance Retrieval-Augmented Generation (RAG) platform indexing 1.5M+ products using OpenAI embeddings and Pinecone vector database. Built as a proprietary enterprise solution at Winjit Technologies.",
       "currentVersion": "v1.4.2",
-      "status": "Active Production",
-      "category": "AI / RAG Platform",
+      "status": "Enterprise / Winjit",
+      "category": "Enterprise AI / RAG",
       "icon": "Cpu",
-      "githubUrl": "https://github.com/himanshuranjan30",
+      "githubUrl": "",
       "demoUrl": "",
       "tags": [
         "Python",
@@ -175,7 +309,7 @@
         "OpenAI",
         "Pinecone",
         "FastAPI",
-        "Vector Search"
+        "Enterprise"
       ],
       "releases": [
         {
@@ -187,81 +321,24 @@
             "Integrated Redis semantic vector caching to reduce OpenAI API latency by 45%.",
             "Enhanced scraping and chunking pipeline handling 1.5M+ technical datasheets."
           ]
-        },
-        {
-          "version": "v1.3.0",
-          "date": "2026-04-10",
-          "highlight": "Distributed ingestion pipeline",
-          "changes": [
-            "Built async Celery batch workers for PDF extraction and metadata parsing.",
-            "Added Pinecone index namespace partitioning for multi-tenant catalog lookups."
-          ]
-        },
-        {
-          "version": "v1.0.0",
-          "date": "2025-10-01",
-          "highlight": "Initial release",
-          "changes": [
-            "Core RAG implementation using OpenAI text-embedding-3-small and Pinecone serverless."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "soft-knowledge-assistant",
-      "title": "LLM-based Knowledge & Voice SQL Assistant",
-      "tagline": "Intelligent conversational assistant with automated SQL synthesis & voice command execution.",
-      "description": "An intelligent multi-modal assistant built using LangChain and OpenAI that translates natural language and speech into validated SQL queries. Enables executives and non-technical stakeholders to perform complex real-time database queries with zero SQL knowledge.",
-      "currentVersion": "v2.1.0",
-      "status": "Active",
-      "category": "GenAI & Automation",
-      "icon": "Activity",
-      "githubUrl": "https://github.com/himanshuranjan30",
-      "demoUrl": "",
-      "tags": [
-        "LangChain",
-        "OpenAI",
-        "SQL Synthesis",
-        "Voice AI",
-        "FastAPI"
-      ],
-      "releases": [
-        {
-          "version": "v2.1.0",
-          "date": "2026-07-22",
-          "highlight": "Real-time voice query execution and SQL dialect adapter",
-          "changes": [
-            "Added WebRTC and Whisper streaming voice synthesis pipeline.",
-            "Supported dynamic SQL schema introspection and injection guardrails.",
-            "Reduced query generation latency by 35% with prompt caching."
-          ]
-        },
-        {
-          "version": "v2.0.0",
-          "date": "2026-02-14",
-          "highlight": "LangChain v0.2 migration & Few-shot SQL validation",
-          "changes": [
-            "Implemented AST-based SQL query sanitizer preventing destructive write operations.",
-            "Added automated execution explanation and tabular visualization export."
-          ]
         }
       ]
     },
     {
       "id": "soft-honeypot",
       "title": "Adaptive Cowrie SSH Honeypot System",
-      "tagline": "Intelligent SSH decoy ecosystem with LLM-powered interactive adversary emulation.",
-      "description": "Next-generation cybersecurity honeypot system extending Cowrie with LLM-driven dynamic shell decoys. Actively traps unauthorized intruders, simulates realistic vulnerable Unix environments, and correlates attacker behavioral telemetry for threat intelligence.",
+      "tagline": "Enterprise SSH decoy ecosystem with LLM-powered interactive adversary emulation.",
+      "description": "Cybersecurity threat intelligence system extending Cowrie with LLM-driven dynamic shell decoys. Developed at Winjit Technologies to simulate realistic vulnerable environments and correlate attacker behavioral telemetry.",
       "currentVersion": "v2.0.0",
-      "status": "Production",
+      "status": "Enterprise / Winjit",
       "category": "Cybersecurity & AI",
       "icon": "Terminal",
-      "githubUrl": "https://github.com/himanshuranjan30",
+      "githubUrl": "",
       "demoUrl": "",
       "tags": [
         "Python",
         "Cowrie SSH",
-        "LLM Decoys",
+        "LLMs",
         "Cybersecurity",
         "Docker"
       ],
@@ -274,46 +351,6 @@
             "Embedded local LLM generator producing realistic Linux responses for zero-day commands.",
             "Automated MITRE ATT&CK tactic tagging on intercepted shell keystrokes.",
             "Real-time alert dispatch to SIEM via AWS EventBridge and CloudWatch."
-          ]
-        },
-        {
-          "version": "v1.0.0",
-          "date": "2025-11-18",
-          "highlight": "Initial honeypot deployment",
-          "changes": [
-            "Containerized Cowrie honeypot node cluster on AWS EC2.",
-            "Automated attacker IP geolocation and brute-force credential logging."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "soft-secure-network",
-      "title": "Secure Network AI & Modem Protection System",
-      "tagline": "ML-driven threat detection, automated mitigation, and voice-guided network watcher.",
-      "description": "Firmware and cloud-connected modem platform integrating machine learning anomaly detection to proactively block DDoS, port scans, and DNS hijacking in real time. Features an AI voice assistant for hands-free network health diagnostics.",
-      "currentVersion": "v1.2.0",
-      "status": "Stable",
-      "category": "Edge AI & IoT Security",
-      "icon": "Cpu",
-      "githubUrl": "https://github.com/himanshuranjan30",
-      "demoUrl": "",
-      "tags": [
-        "PyTorch",
-        "MLflow",
-        "Edge Security",
-        "AWS IoT",
-        "Voice Control"
-      ],
-      "releases": [
-        {
-          "version": "v1.2.0",
-          "date": "2026-05-19",
-          "highlight": "Quantized edge anomaly model & real-time voice monitoring",
-          "changes": [
-            "Deployed INT8 quantized PyTorch model achieving 98.7% packet anomaly detection accuracy.",
-            "Integrated voice command interface for instant bandwidth and intrusion audits.",
-            "Integrated with AWS CloudWatch for telemetry graphing."
           ]
         }
       ]
