@@ -3,6 +3,7 @@ import cors from 'cors';
 import path from 'node:path';
 import fs from 'node:fs';
 import { fileURLToPath } from 'node:url';
+import crypto from 'node:crypto';
 import dotenv from 'dotenv';
 import * as db from './db.js';
 
@@ -19,10 +20,20 @@ const app = express();
 // Initialize DB
 db.loadDb();
 
+// Security Response Headers Middleware
+app.use((req, res, next) => {
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  res.setHeader('X-Frame-Options', 'DENY');
+  res.setHeader('X-XSS-Protection', '1; mode=block');
+  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+  res.setHeader('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
+  next();
+});
+
 // Middlewares
 app.use(cors());
-app.use(express.json({ limit: '10mb' }));
-app.use(express.urlencoded({ extended: true, limit: '10mb' }));
+app.use(express.json({ limit: '1mb' }));
+app.use(express.urlencoded({ extended: true, limit: '1mb' }));
 
 // Request logging in development
 app.use((req, res, next) => {
@@ -36,12 +47,82 @@ app.use((req, res, next) => {
   next();
 });
 
-// Admin authentication middleware
+/* ================= SECURITY & RATE LIMITING ================= */
+
+// Constant-time string comparison to prevent timing attacks
+function constantTimeCompare(a, b) {
+  if (typeof a !== 'string' || typeof b !== 'string') return false;
+  const aHash = crypto.createHash('sha256').update(a).digest();
+  const bHash = crypto.createHash('sha256').update(b).digest();
+  return crypto.timingSafeEqual(aHash, bHash);
+}
+
+// In-memory brute-force rate limiter for authentication
+const authRateLimiter = new Map(); // ip -> { count, firstAttempt, blockedUntil }
+
+function getClientIp(req) {
+  return req.headers['x-forwarded-for']?.split(',')[0]?.trim() || req.socket?.remoteAddress || '127.0.0.1';
+}
+
+function checkAuthRateLimit(req, res, next) {
+  const ip = getClientIp(req);
+  const now = Date.now();
+  const record = authRateLimiter.get(ip);
+
+  if (record && record.blockedUntil && now < record.blockedUntil) {
+    const waitMins = Math.ceil((record.blockedUntil - now) / 60000);
+    return res.status(429).json({ 
+      error: `Too many failed login attempts. IP temporarily locked for ${waitMins} minute(s).` 
+    });
+  }
+  next();
+}
+
+function recordFailedLogin(ip) {
+  const now = Date.now();
+  const record = authRateLimiter.get(ip) || { count: 0, firstAttempt: now, blockedUntil: 0 };
+  if (now - record.firstAttempt > 15 * 60 * 1000) {
+    record.count = 1;
+    record.firstAttempt = now;
+    record.blockedUntil = 0;
+  } else {
+    record.count += 1;
+    if (record.count >= 5) {
+      record.blockedUntil = now + 15 * 60 * 1000; // 15-minute lockout
+      console.warn(`[SECURITY] IP ${ip} locked out after 5 consecutive failed auth attempts.`);
+    }
+  }
+  authRateLimiter.set(ip, record);
+}
+
+function recordSuccessfulLogin(ip) {
+  authRateLimiter.delete(ip);
+}
+
+// Contact form rate limiter (max 10 submissions per hour per IP)
+const contactSubmissions = new Map();
+function checkContactRateLimit(req, res, next) {
+  const ip = getClientIp(req);
+  const now = Date.now();
+  const history = (contactSubmissions.get(ip) || []).filter(t => now - t < 60 * 60 * 1000);
+  if (history.length >= 10) {
+    return res.status(429).json({ error: 'Too many messages sent. Please wait before submitting again.' });
+  }
+  history.push(now);
+  contactSubmissions.set(ip, history);
+  next();
+}
+
+// Admin authentication middleware (header-only, constant-time)
 const requireAdmin = (req, res, next) => {
-  const pin = req.headers['x-admin-pin'] || req.headers['authorization']?.replace('Bearer ', '') || req.query.admin_pin;
-  if (!pin || pin !== ADMIN_SECRET) {
+  const ip = getClientIp(req);
+  const pin = req.headers['x-admin-pin'] || req.headers['authorization']?.replace(/^Bearer\s+/i, '');
+
+  if (!pin || !constantTimeCompare(pin, ADMIN_SECRET)) {
+    recordFailedLogin(ip);
     return res.status(401).json({ error: 'Unauthorized: Invalid Admin Key' });
   }
+  recordSuccessfulLogin(ip);
   next();
 };
 
@@ -93,12 +174,15 @@ app.get('/api/all', (req, res) => {
   }
 });
 
-// Auth check
-app.post('/api/auth/verify', (req, res) => {
-  const { pin } = req.body;
-  if (pin === ADMIN_SECRET) {
+// Auth check with brute-force rate limiting
+app.post('/api/auth/verify', checkAuthRateLimit, (req, res) => {
+  const ip = getClientIp(req);
+  const { pin } = req.body || {};
+  if (pin && constantTimeCompare(pin, ADMIN_SECRET)) {
+    recordSuccessfulLogin(ip);
     return res.json({ authenticated: true, message: 'Admin verified successfully' });
   }
+  recordFailedLogin(ip);
   return res.status(401).json({ authenticated: false, message: 'Invalid admin key' });
 });
 
@@ -239,14 +323,26 @@ app.delete('/api/posts/:id', requireAdmin, (req, res) => {
   }
 });
 
-// Contact Form
-app.post('/api/contact', (req, res) => {
+// Contact Form with rate limiting & input sanitization
+app.post('/api/contact', checkContactRateLimit, (req, res) => {
   try {
-    const { name, email, message } = req.body;
+    const { name, email, message } = req.body || {};
     if (!name || !email || !message) {
       return res.status(400).json({ error: 'Name, email, and message are required' });
     }
-    const saved = db.saveContactMessage({ name, email, message });
+    const cleanName = String(name).trim();
+    const cleanEmail = String(email).trim();
+    const cleanMessage = String(message).trim();
+
+    if (cleanName.length > 100 || cleanEmail.length > 150 || cleanMessage.length > 5000) {
+      return res.status(400).json({ error: 'Input exceeded maximum character limits' });
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(cleanEmail)) {
+      return res.status(400).json({ error: 'Please enter a valid email address' });
+    }
+
+    const saved = db.saveContactMessage({ name: cleanName, email: cleanEmail, message: cleanMessage });
     res.status(201).json({ success: true, message: 'Message sent successfully!', id: saved.id });
   } catch (err) {
     res.status(500).json({ error: 'Failed to send message' });

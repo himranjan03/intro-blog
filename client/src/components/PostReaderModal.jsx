@@ -1,18 +1,20 @@
 import React, { useMemo } from 'react';
 import { X, Calendar, Clock, User, Share2, Tag, Check } from 'lucide-react';
 import { marked } from 'marked';
+import DOMPurify from 'dompurify';
 
 export default function PostReaderModal({ post, onClose }) {
   const [copied, setCopied] = React.useState(false);
 
   if (!post) return null;
 
-  // Safe parse markdown
+  // Safe parse markdown with DOMPurify XSS sanitization
   const htmlContent = useMemo(() => {
     try {
-      return marked.parse(post.content || '');
+      const rawHtml = marked.parse(post.content || '');
+      return DOMPurify.sanitize(rawHtml);
     } catch (e) {
-      return `<p>${post.content}</p>`;
+      return `<p>${DOMPurify.sanitize(post.content || '')}</p>`;
     }
   }, [post.content]);
 
