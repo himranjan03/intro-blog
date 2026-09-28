@@ -1,0 +1,277 @@
+{
+  "profile": {
+    "name": "Himanshu Ranjan",
+    "title": "Backend & AI/ML Engineer",
+    "tagline": "Building scalable, secure, and intelligent backend platforms using Python, Node.js, AWS, and AI/ML technologies.",
+    "bio": "Backend & AI/ML engineer with 4+ years of experience designing scalable, fault-tolerant distributed systems leveraging Python, Node.js, and AWS cloud-native services. Proven expertise in deploying LLM-powered RAG pipelines across 1.5M+ records, engineering production MLOps lifecycles (MLflow, DVC, Evidently), and designing high-throughput microservices processing up to 60 TB/day.",
+    "location": "Patna, India",
+    "email": "himanshuranjan3@gmail.com",
+    "phone": "+91 9801134694",
+    "avatar": "/profile.jpg",
+    "resumeUrl": "#",
+    "social": {
+      "github": "https://github.com/himanshuranjan30",
+      "linkedin": "https://www.linkedin.com/in/himanshu-ranjan",
+      "twitter": "https://x.com",
+      "email": "mailto:himanshuranjan3@gmail.com"
+    },
+    "stats": [
+      { "label": "Years in AI & Backend", "value": "4+ Years" },
+      { "label": "Data Pipelines", "value": "60 TB/day" },
+      { "label": "RAG Index Scale", "value": "1.5M+ Recs" },
+      { "label": "Turnaround Gain", "value": "+35% Faster" }
+    ],
+    "skills": {
+      "Languages & Frameworks": ["Python", "FastAPI", "Django", "Node.js", "Express"],
+      "AI / ML & MLOps": ["Scikit-learn", "TensorFlow", "PyTorch", "MLflow", "DVC", "Evidently"],
+      "LLM & RAG Systems": ["OpenAI", "LlamaIndex", "LangChain", "Pinecone", "Vector Search"],
+      "Cloud & DevOps": ["AWS (EC2, S3, EventBridge, CloudWatch)", "Docker", "PM2"],
+      "Databases & Storage": ["MySQL", "MongoDB", "Redis", "AWS S3"],
+      "Security & Telemetry": ["JWT / OAuth", "Nmap", "Cowrie SSH", "CloudWatch Observability"]
+    },
+    "coreCompetencies": [
+      "End-to-End Solution Ownership",
+      "Scalable AI Platform Engineering",
+      "Enterprise Data Pipeline Orchestration",
+      "Cloud-Native System Architecture",
+      "Production-Grade MLOps & Drift Mitigation",
+      "Intelligent Automation & Workflow Optimization",
+      "High-Availability System Reliability",
+      "Secure Digital Payment & Compliance (Finix, Plaid)"
+    ]
+  },
+  "career": [
+    {
+      "id": "exp-winjit",
+      "role": "Backend & AI/ML Engineer",
+      "company": "Winjit Technologies Pvt. Ltd.",
+      "location": "India",
+      "period": "Jul 2021 - Present",
+      "type": "work",
+      "summary": "Driving innovative, data-centric solutions bridging advanced AI capabilities with resilient cloud backend infrastructures across microservices, RAG platforms, and MLOps pipelines.",
+      "achievements": [
+        "MLOps Pipeline Orchestration: Orchestrated scalable ML pipelines using MLflow, DVC, and Evidently, enabling automated training, performance monitoring, drift detection, and self-healing retraining workflows.",
+        "Threat Intelligence: Designed adaptive SSH honeypot ecosystems (Cowrie) with LLM-driven decoys, continuously strengthening threat detection capabilities & behavioral analytics through intelligent log correlation.",
+        "Cloud Reliability Engineering: Operationalized Finix & Plaid payment integrations while continuously fortifying AWS observability through CloudWatch and EventBridge to ensure high availability, compliance, and transactional resilience.",
+        "Digital Workflow Optimization: Engineered automated document generation pipelines leveraging S3 storage and dynamic PDF rendering, streamlining contract lifecycle management and enterprise reporting workflows.",
+        "Data Pipeline Engineering: Designed and maintained high-throughput RESTful APIs and data pipelines using Python/Node.js and MySQL/MongoDB, enabling large-scale application performance for property management and micro-lending platforms.",
+        "Key Highlight: Led end-to-end delivery of scalable AI platforms supporting 3+ workloads, reducing solution turnaround time by 35%.",
+        "Key Highlight: Architected cloud-native data pipelines processing 60 TB/day, improving data throughput and reducing latency by 35%."
+      ],
+      "technologies": ["Python", "FastAPI", "Node.js", "AWS", "MLflow", "DVC", "Pinecone", "LangChain", "Docker", "MySQL", "MongoDB"]
+    },
+    {
+      "id": "exp-nit-patna",
+      "role": "M.Tech in Computer Science & Engineering",
+      "company": "National Institute of Technology (NIT) Patna",
+      "location": "Patna, India",
+      "period": "2020 - 2022",
+      "type": "education",
+      "summary": "Specialized in Advanced Algorithms, Distributed Systems, Machine Learning, and Cloud Computing Architecture.",
+      "achievements": [
+        "Graduated with GPA 8.0 / 10.",
+        "Conducted deep research in intelligent data processing and high-performance computing systems."
+      ],
+      "technologies": ["Python", "Machine Learning", "Distributed Systems", "Data Structures", "Cloud Architecture"]
+    },
+    {
+      "id": "exp-sirt-bhopal",
+      "role": "B.Tech in Computer Science & Engineering",
+      "company": "SIRT Bhopal",
+      "location": "Bhopal, India",
+      "period": "2012 - 2016",
+      "type": "education",
+      "summary": "Core foundational studies in Computer Science, Database Management, Operating Systems, and Network Security.",
+      "achievements": [
+        "Graduated with GPA 8.26 / 10.",
+        "Active participant and team lead in technical project exhibitions and competitive programming."
+      ],
+      "technologies": ["C++", "Operating Systems", "Computer Networks", "Database Management (RDBMS)"]
+    }
+  ],
+  "software": [
+    {
+      "id": "soft-rag-chatbot",
+      "title": "Electronics Connector AI Chatbot (RAG)",
+      "tagline": "Large-scale semantic search & retrieval engine over 1.5M+ electronic product records.",
+      "description": "High-performance Retrieval-Augmented Generation (RAG) platform indexing 1.5M+ products using OpenAI embeddings and Pinecone vector database. Incorporates automated web scraping, data normalization, and low-latency semantic query resolution.",
+      "currentVersion": "v1.4.2",
+      "status": "Active Production",
+      "category": "AI / RAG Platform",
+      "icon": "Cpu",
+      "githubUrl": "https://github.com/himanshuranjan30",
+      "demoUrl": "",
+      "tags": ["Python", "RAG", "OpenAI", "Pinecone", "FastAPI", "Vector Search"],
+      "releases": [
+        {
+          "version": "v1.4.2",
+          "date": "2026-08-15",
+          "highlight": "Vector cache layer & hybrid keyword-semantic reranking",
+          "changes": [
+            "Introduced cross-encoder reranking stage for ambiguous electronic component queries.",
+            "Integrated Redis semantic vector caching to reduce OpenAI API latency by 45%.",
+            "Enhanced scraping and chunking pipeline handling 1.5M+ technical datasheets."
+          ]
+        },
+        {
+          "version": "v1.3.0",
+          "date": "2026-04-10",
+          "highlight": "Distributed ingestion pipeline",
+          "changes": [
+            "Built async Celery batch workers for PDF extraction and metadata parsing.",
+            "Added Pinecone index namespace partitioning for multi-tenant catalog lookups."
+          ]
+        },
+        {
+          "version": "v1.0.0",
+          "date": "2025-10-01",
+          "highlight": "Initial release",
+          "changes": [
+            "Core RAG implementation using OpenAI text-embedding-3-small and Pinecone serverless."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "soft-knowledge-assistant",
+      "title": "LLM-based Knowledge & Voice SQL Assistant",
+      "tagline": "Intelligent conversational assistant with automated SQL synthesis & voice command execution.",
+      "description": "An intelligent multi-modal assistant built using LangChain and OpenAI that translates natural language and speech into validated SQL queries. Enables executives and non-technical stakeholders to perform complex real-time database queries with zero SQL knowledge.",
+      "currentVersion": "v2.1.0",
+      "status": "Active",
+      "category": "GenAI & Automation",
+      "icon": "Activity",
+      "githubUrl": "https://github.com/himanshuranjan30",
+      "demoUrl": "",
+      "tags": ["LangChain", "OpenAI", "SQL Synthesis", "Voice AI", "FastAPI"],
+      "releases": [
+        {
+          "version": "v2.1.0",
+          "date": "2026-07-22",
+          "highlight": "Real-time voice query execution and SQL dialect adapter",
+          "changes": [
+            "Added WebRTC and Whisper streaming voice synthesis pipeline.",
+            "Supported dynamic SQL schema introspection and injection guardrails.",
+            "Reduced query generation latency by 35% with prompt caching."
+          ]
+        },
+        {
+          "version": "v2.0.0",
+          "date": "2026-02-14",
+          "highlight": "LangChain v0.2 migration & Few-shot SQL validation",
+          "changes": [
+            "Implemented AST-based SQL query sanitizer preventing destructive write operations.",
+            "Added automated execution explanation and tabular visualization export."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "soft-honeypot",
+      "title": "Adaptive Cowrie SSH Honeypot System",
+      "tagline": "Intelligent SSH decoy ecosystem with LLM-powered interactive adversary emulation.",
+      "description": "Next-generation cybersecurity honeypot system extending Cowrie with LLM-driven dynamic shell decoys. Actively traps unauthorized intruders, simulates realistic vulnerable Unix environments, and correlates attacker behavioral telemetry for threat intelligence.",
+      "currentVersion": "v2.0.0",
+      "status": "Production",
+      "category": "Cybersecurity & AI",
+      "icon": "Terminal",
+      "githubUrl": "https://github.com/himanshuranjan30",
+      "demoUrl": "",
+      "tags": ["Python", "Cowrie SSH", "LLM Decoys", "Cybersecurity", "Docker"],
+      "releases": [
+        {
+          "version": "v2.0.0",
+          "date": "2026-09-01",
+          "highlight": "LLM interactive command simulator & MITRE ATT&CK mapping",
+          "changes": [
+            "Embedded local LLM generator producing realistic Linux responses for zero-day commands.",
+            "Automated MITRE ATT&CK tactic tagging on intercepted shell keystrokes.",
+            "Real-time alert dispatch to SIEM via AWS EventBridge and CloudWatch."
+          ]
+        },
+        {
+          "version": "v1.0.0",
+          "date": "2025-11-18",
+          "highlight": "Initial honeypot deployment",
+          "changes": [
+            "Containerized Cowrie honeypot node cluster on AWS EC2.",
+            "Automated attacker IP geolocation and brute-force credential logging."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "soft-secure-network",
+      "title": "Secure Network AI & Modem Protection System",
+      "tagline": "ML-driven threat detection, automated mitigation, and voice-guided network watcher.",
+      "description": "Firmware and cloud-connected modem platform integrating machine learning anomaly detection to proactively block DDoS, port scans, and DNS hijacking in real time. Features an AI voice assistant for hands-free network health diagnostics.",
+      "currentVersion": "v1.2.0",
+      "status": "Stable",
+      "category": "Edge AI & IoT Security",
+      "icon": "Cpu",
+      "githubUrl": "https://github.com/himanshuranjan30",
+      "demoUrl": "",
+      "tags": ["PyTorch", "MLflow", "Edge Security", "AWS IoT", "Voice Control"],
+      "releases": [
+        {
+          "version": "v1.2.0",
+          "date": "2026-05-19",
+          "highlight": "Quantized edge anomaly model & real-time voice monitoring",
+          "changes": [
+            "Deployed INT8 quantized PyTorch model achieving 98.7% packet anomaly detection accuracy.",
+            "Integrated voice command interface for instant bandwidth and intrusion audits.",
+            "Integrated with AWS CloudWatch for telemetry graphing."
+          ]
+        }
+      ]
+    }
+  ],
+  "posts": [
+    {
+      "id": "post-rag-scale",
+      "slug": "deploying-rag-pipelines-scale-1-5m-records",
+      "title": "Deploying High-Performance RAG Pipelines Across 1.5M+ Records with OpenAI and Pinecone",
+      "summary": "Architectural insights on building sub-100ms semantic search systems over massive product catalogs, hybrid search reranking, and vector caching strategies.",
+      "category": "AI / RAG Architecture",
+      "tags": ["RAG", "OpenAI", "Pinecone", "Vector Search", "Python", "FastAPI"],
+      "publishedAt": "2026-09-18",
+      "readTime": "7 min read",
+      "coverImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
+      "author": "Himanshu Ranjan",
+      "content": "### The Challenge of Large-Scale Vector Retrieval\n\nWhen scaling Retrieval-Augmented Generation (RAG) platforms beyond millions of documents—such as indexing 1.5M+ electronic product datasheets—naive cosine similarity over vector databases introduces latency bottlenecks and precision loss.\n\nHere is how we architected a resilient, production-grade RAG pipeline capable of handling dense technical specs with high retrieval accuracy:\n\n#### 1. Chunking with Context Preservation\n\nElectronic components have intricate specifications (voltage ratings, pinouts, tolerance). Splitting text purely by character count destroys table semantics. We implemented AST-guided Markdown splitting:\n\n```python\ndef chunk_datasheet_with_metadata(doc_text: str, component_id: str):\n    # Extract top-level attributes\n    header_context = extract_component_attributes(doc_text)\n    chunks = semantic_text_splitter.split_text(doc_text)\n    \n    enriched_chunks = []\n    for chunk in chunks:\n        # Prepend contextual metadata to each vector chunk\n        enriched = f\"Component: {component_id} | Context: {header_context}\\n{chunk}\"\n        enriched_chunks.append(enriched)\n    return enriched_chunks\n```\n\n#### 2. Hybrid Search & Cross-Encoder Reranking\n\nPure dense embeddings struggle with exact alphanumeric part numbers (e.g. `STM32F401RE`). By combining **Sparse BM25** with **Dense Pinecone Vector Search** and feeding the top-50 results through a cross-encoder reranker, Top-3 retrieval precision surged from 71% to 94.6%.\n\n#### 3. Semantic Vector Caching with Redis\n\nOver 35% of customer queries share semantic equivalence. Storing normalized vector embeddings in Redis allows instantaneous cache hits without touching external LLM APIs."
+    },
+    {
+      "id": "post-mlops-lifecycle",
+      "slug": "production-mlops-lifecycle-mlflow-dvc-evidently",
+      "title": "Mastering the Production MLOps Lifecycle: Continuous Training, DVC, and Evidently Drift Detection",
+      "summary": "How we orchestrate automated machine learning retraining workflows, detect data and concept drift, and maintain version control across datasets and models.",
+      "category": "MLOps & Engineering",
+      "tags": ["MLOps", "MLflow", "DVC", "Evidently", "Data Drift", "Python"],
+      "publishedAt": "2026-08-30",
+      "readTime": "6 min read",
+      "coverImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+      "author": "Himanshu Ranjan",
+      "content": "### Why Machine Learning Models Fail Silently in Production\n\nUnlike traditional backend microservices that crash with clean stack traces, machine learning models degrade silently. When production data distributions drift away from training distributions, prediction accuracy plummets without throwing a single HTTP 500 error.\n\nTo solve this at scale, we constructed an end-to-end MLOps ecosystem utilizing **MLflow**, **DVC**, and **Evidently AI**.\n\n#### 1. Data Version Control (DVC)\n\nEvery dataset iteration is versioned and tied directly to Git commit hashes. This guarantees complete auditability—every model artifact in our AWS S3 bucket can be traced back to the exact training data slice.\n\n#### 2. Automated Drift Detection with Evidently AI\n\nWe schedule automated statistical tests (Kolmogorov-Smirnov and Population Stability Index) comparing sliding 24-hour inference logs against baseline training metrics. When drift exceeds a 0.05 p-value threshold, automated webhooks trigger retraining pipelines in AWS EventBridge."
+    },
+    {
+      "id": "post-llm-honeypot",
+      "slug": "engineering-adaptive-honeypots-cowrie-llm-decoys",
+      "title": "Deceiving Attackers at Scale: Engineering Adaptive SSH Honeypots with Cowrie and LLM Decoys",
+      "summary": "Building intelligent deception environments that capture zero-day attacker techniques using LLM-driven shell emulation and MITRE ATT&CK log correlation.",
+      "category": "Cybersecurity & AI",
+      "tags": ["Cybersecurity", "Honeypot", "Cowrie", "LLMs", "Threat Intelligence", "AWS"],
+      "publishedAt": "2026-07-14",
+      "readTime": "5 min read",
+      "coverImage": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80",
+      "author": "Himanshu Ranjan",
+      "content": "### Beyond Static Decoys\n\nTraditional SSH honeypots rely on static file trees and hardcoded bash responses. Sophisticated adversaries immediately recognize the decoy and disconnect within seconds.\n\nBy coupling Cowrie honeypots with responsive LLM decoders, unknown commands executed by attackers are dynamically rendered with realistic output, prolonging attacker engagement and capturing high-value zero-day payloads for threat intelligence."
+    }
+  ],
+  "messages": [],
+  "settings": {
+    "siteName": "Himanshu Ranjan | Backend & AI/ML Engineer",
+    "siteDescription": "Personal portfolio, career roadmap, RAG & MLOps software showcase, and technical blog by Himanshu Ranjan.",
+    "footerNote": "Crafted with passion using Python, Node.js, Express, React, and PM2.",
+    "adminPin": "admin123"
+  }
+}
