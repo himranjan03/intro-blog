@@ -16,18 +16,63 @@
       "email": "mailto:himanshuranjan3@gmail.com"
     },
     "stats": [
-      { "label": "Years in AI & Backend", "value": "4+ Years" },
-      { "label": "Data Pipelines", "value": "60 TB/day" },
-      { "label": "RAG Index Scale", "value": "1.5M+ Recs" },
-      { "label": "Turnaround Gain", "value": "+35% Faster" }
+      {
+        "label": "Years in AI & Backend",
+        "value": "4+ Years"
+      },
+      {
+        "label": "Data Pipelines",
+        "value": "60 TB/day"
+      },
+      {
+        "label": "RAG Index Scale",
+        "value": "1.5M+ Recs"
+      },
+      {
+        "label": "Turnaround Gain",
+        "value": "+35% Faster"
+      }
     ],
     "skills": {
-      "Languages & Frameworks": ["Python", "FastAPI", "Django", "Node.js", "Express"],
-      "AI / ML & MLOps": ["Scikit-learn", "TensorFlow", "PyTorch", "MLflow", "DVC", "Evidently"],
-      "LLM & RAG Systems": ["OpenAI", "LlamaIndex", "LangChain", "Pinecone", "Vector Search"],
-      "Cloud & DevOps": ["AWS (EC2, S3, EventBridge, CloudWatch)", "Docker", "PM2"],
-      "Databases & Storage": ["MySQL", "MongoDB", "Redis", "AWS S3"],
-      "Security & Telemetry": ["JWT / OAuth", "Nmap", "Cowrie SSH", "CloudWatch Observability"]
+      "Languages & Frameworks": [
+        "Python",
+        "FastAPI",
+        "Django",
+        "Node.js",
+        "Express"
+      ],
+      "AI / ML & MLOps": [
+        "Scikit-learn",
+        "TensorFlow",
+        "PyTorch",
+        "MLflow",
+        "DVC",
+        "Evidently"
+      ],
+      "LLM & RAG Systems": [
+        "OpenAI",
+        "LlamaIndex",
+        "LangChain",
+        "Pinecone",
+        "Vector Search"
+      ],
+      "Cloud & DevOps": [
+        "AWS (EC2, S3, EventBridge, CloudWatch)",
+        "Docker",
+        "PM2"
+      ],
+      "Databases & Storage": [
+        "MySQL",
+        "MongoDB",
+        "Redis",
+        "AWS S3"
+      ],
+      "Security & Telemetry": [
+        "JWT / OAuth",
+        "Nmap",
+        "Cowrie SSH",
+        "CloudWatch Observability"
+      ]
     },
     "coreCompetencies": [
       "End-to-End Solution Ownership",
@@ -58,7 +103,19 @@
         "Key Highlight: Led end-to-end delivery of scalable AI platforms supporting 3+ workloads, reducing solution turnaround time by 35%.",
         "Key Highlight: Architected cloud-native data pipelines processing 60 TB/day, improving data throughput and reducing latency by 35%."
       ],
-      "technologies": ["Python", "FastAPI", "Node.js", "AWS", "MLflow", "DVC", "Pinecone", "LangChain", "Docker", "MySQL", "MongoDB"]
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "Node.js",
+        "AWS",
+        "MLflow",
+        "DVC",
+        "Pinecone",
+        "LangChain",
+        "Docker",
+        "MySQL",
+        "MongoDB"
+      ]
     },
     {
       "id": "exp-nit-patna",
@@ -72,7 +129,13 @@
         "Graduated with GPA 8.0 / 10.",
         "Conducted deep research in intelligent data processing and high-performance computing systems."
       ],
-      "technologies": ["Python", "Machine Learning", "Distributed Systems", "Data Structures", "Cloud Architecture"]
+      "technologies": [
+        "Python",
+        "Machine Learning",
+        "Distributed Systems",
+        "Data Structures",
+        "Cloud Architecture"
+      ]
     },
     {
       "id": "exp-sirt-bhopal",
@@ -86,7 +149,12 @@
         "Graduated with GPA 8.26 / 10.",
         "Active participant and team lead in technical project exhibitions and competitive programming."
       ],
-      "technologies": ["C++", "Operating Systems", "Computer Networks", "Database Management (RDBMS)"]
+      "technologies": [
+        "C++",
+        "Operating Systems",
+        "Computer Networks",
+        "Database Management (RDBMS)"
+      ]
     }
   ],
   "software": [
@@ -101,7 +169,14 @@
       "icon": "Cpu",
       "githubUrl": "https://github.com/himanshuranjan30",
       "demoUrl": "",
-      "tags": ["Python", "RAG", "OpenAI", "Pinecone", "FastAPI", "Vector Search"],
+      "tags": [
+        "Python",
+        "RAG",
+        "OpenAI",
+        "Pinecone",
+        "FastAPI",
+        "Vector Search"
+      ],
       "releases": [
         {
           "version": "v1.4.2",
@@ -143,7 +218,13 @@
       "icon": "Activity",
       "githubUrl": "https://github.com/himanshuranjan30",
       "demoUrl": "",
-      "tags": ["LangChain", "OpenAI", "SQL Synthesis", "Voice AI", "FastAPI"],
+      "tags": [
+        "LangChain",
+        "OpenAI",
+        "SQL Synthesis",
+        "Voice AI",
+        "FastAPI"
+      ],
       "releases": [
         {
           "version": "v2.1.0",
@@ -177,7 +258,13 @@
       "icon": "Terminal",
       "githubUrl": "https://github.com/himanshuranjan30",
       "demoUrl": "",
-      "tags": ["Python", "Cowrie SSH", "LLM Decoys", "Cybersecurity", "Docker"],
+      "tags": [
+        "Python",
+        "Cowrie SSH",
+        "LLM Decoys",
+        "Cybersecurity",
+        "Docker"
+      ],
       "releases": [
         {
           "version": "v2.0.0",
@@ -211,7 +298,13 @@
       "icon": "Cpu",
       "githubUrl": "https://github.com/himanshuranjan30",
       "demoUrl": "",
-      "tags": ["PyTorch", "MLflow", "Edge Security", "AWS IoT", "Voice Control"],
+      "tags": [
+        "PyTorch",
+        "MLflow",
+        "Edge Security",
+        "AWS IoT",
+        "Voice Control"
+      ],
       "releases": [
         {
           "version": "v1.2.0",
@@ -233,7 +326,14 @@
       "title": "Deploying High-Performance RAG Pipelines Across 1.5M+ Records with OpenAI and Pinecone",
       "summary": "Architectural insights on building sub-100ms semantic search systems over massive product catalogs, hybrid search reranking, and vector caching strategies.",
       "category": "AI / RAG Architecture",
-      "tags": ["RAG", "OpenAI", "Pinecone", "Vector Search", "Python", "FastAPI"],
+      "tags": [
+        "RAG",
+        "OpenAI",
+        "Pinecone",
+        "Vector Search",
+        "Python",
+        "FastAPI"
+      ],
       "publishedAt": "2026-09-18",
       "readTime": "7 min read",
       "coverImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
@@ -246,7 +346,14 @@
       "title": "Mastering the Production MLOps Lifecycle: Continuous Training, DVC, and Evidently Drift Detection",
       "summary": "How we orchestrate automated machine learning retraining workflows, detect data and concept drift, and maintain version control across datasets and models.",
       "category": "MLOps & Engineering",
-      "tags": ["MLOps", "MLflow", "DVC", "Evidently", "Data Drift", "Python"],
+      "tags": [
+        "MLOps",
+        "MLflow",
+        "DVC",
+        "Evidently",
+        "Data Drift",
+        "Python"
+      ],
       "publishedAt": "2026-08-30",
       "readTime": "6 min read",
       "coverImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
@@ -259,7 +366,14 @@
       "title": "Deceiving Attackers at Scale: Engineering Adaptive SSH Honeypots with Cowrie and LLM Decoys",
       "summary": "Building intelligent deception environments that capture zero-day attacker techniques using LLM-driven shell emulation and MITRE ATT&CK log correlation.",
       "category": "Cybersecurity & AI",
-      "tags": ["Cybersecurity", "Honeypot", "Cowrie", "LLMs", "Threat Intelligence", "AWS"],
+      "tags": [
+        "Cybersecurity",
+        "Honeypot",
+        "Cowrie",
+        "LLMs",
+        "Threat Intelligence",
+        "AWS"
+      ],
       "publishedAt": "2026-07-14",
       "readTime": "5 min read",
       "coverImage": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80",
